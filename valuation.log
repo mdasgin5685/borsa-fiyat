@@ -1,0 +1,20 @@
+[    81s] BIST 0 AEFES True
+[   181s] BIST 10 BMSTL True
+[   316s] BIST 20 EREGL True
+[   403s] BIST 30 KARCL False
+[   532s] BIST 40 MASFN False
+[   576s] BIST 50 PGSUS True
+[   624s] BIST 60 SKTAS True
+[   653s] BIST 70 TRGYO True
+[   682s] BIST 80 VAKBN True
+[   691s] BIST bitti 69
+[   695s] sektörler bitti 68
+[   702s] ABD bitti 99
+Traceback (most recent call last):
+  File "/home/runner/work/borsa-fiyat/borsa-fiyat/valuation.py", line 220, in <module>
+    if r["pe"]: notes.append(f"F/K {fmt(r['pe'])}" + (f" (sektör {fmt(spe)}, kendi ortalaması {fmt(hpe)})" if spe or hpe else ""))
+                                                                  ^^^^^^^^
+  File "/home/runner/work/borsa-fiyat/borsa-fiyat/valuation.py", line 182, in <lambda>
+    fmt = lambda x, d=1: f"{x:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+                           ^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
