@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T15:23:17+03:00",
+ "generatedAt": "2026-11-04T15:33:33+03:00",
  "method": "sektör çarpanları + kendi geçmişi (2023 sonu →) + Graham; ortalama",
  "grahamBIST": {
   "pe": 9.54,
@@ -1721,7 +1721,7 @@
    "upside": 351.4,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 0,9 (sektör 4,9, kendi ortalaması 5,5); PD/DD 0,77 (sektör 0,99, kendi ortalaması 3,90)"
+   "note": "F/K 0,9 (sektör 4,9, kendi ortalaması 5,5); PD/DD 0,77 (sektör 0,99, kendi ortalaması 3,90); son 12 aylık kâr bir yıl öncekinin 7 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur"
   },
   "LMKDC": {
    "market": "BIST",
@@ -2484,7 +2484,7 @@
    "upside": 127.7,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 2,5 (sektör —, kendi ortalaması 7,1); PD/DD 0,34 (sektör 0,56, kendi ortalaması 0,39)"
+   "note": "F/K 2,5 (sektör —, kendi ortalaması 7,1); PD/DD 0,34 (sektör 0,56, kendi ortalaması 0,39); son 12 aylık kâr bir yıl öncekinin 7 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur"
   },
   "RYSAS": {
    "market": "BIST",
@@ -2534,7 +2534,7 @@
    "upside": -35.8,
    "verdict": "pahalı",
    "cur": "₺",
-   "note": "F/K 15,8 (sektör 10,7, kendi ortalaması 12,3); PD/DD 1,93 (sektör 0,60, kendi ortalaması 1,93)"
+   "note": "F/K 15,8 (sektör 10,7, kendi ortalaması 12,3); PD/DD 1,93 (sektör 0,60, kendi ortalaması 1,93); son 12 aylık kâr bir yıl öncekinin 7 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur"
   },
   "SAHOL": {
    "market": "BIST",
@@ -3157,7 +3157,7 @@
    "upside": 8.2,
    "verdict": "makul",
    "cur": "₺",
-   "note": "F/K 7,8 (sektör 11,6, kendi ortalaması 11,0); PD/DD 1,66 (sektör 0,86, kendi ortalaması 2,32)"
+   "note": "F/K 7,8 (sektör 11,6, kendi ortalaması 11,0); PD/DD 1,66 (sektör 0,86, kendi ortalaması 2,32); son 12 aylık kâr bir yıl öncekinin 5 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur"
   },
   "TRENJ": {
    "market": "BIST",

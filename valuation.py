@@ -242,6 +242,13 @@ for c, r in data.items():
     if r["pe"]: notes.append(f"F/K {fmt(r['pe'])}" + (f" (sektör {fmt(spe)}, kendi ortalaması {fmt(hpe)})" if spe or hpe else ""))
     else: notes.append("son 12 ayda zarar ettiği için F/K hesaplanamıyor")
     if r["pb"]: notes.append(f"PD/DD {fmt(r['pb'], 2)}" + (f" (sektör {fmt(spb, 2)}, kendi ortalaması {fmt(hpb, 2)})" if spb or hpb else ""))
+    ser_ = r.get("series") or {}
+    if r["market"] == "BIST" and ser_ and r.get("period") in ser_:
+        y_, p_ = map(int, r["period"].split("/"))
+        res_ = {tuple(map(int, k.split("/"))): v for k, v in ser_.items()}
+        prev_ = ttm(res_, y_ - 1, p_)
+        if prev_ and prev_ > 0 and net and net / prev_ > 3:
+            notes.append(f"son 12 aylık kâr bir yıl öncekinin {fmt(net / prev_, 0)} katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur")
     verdict = None
     if up is not None:
         verdict = "ucuz" if up >= 20 else "makul" if up > -15 else "pahalı"
