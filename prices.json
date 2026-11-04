@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-11-04T10:37:11+03:00",
+ "generatedAt": "2026-11-04T10:38:20+03:00",
  "quotes": {
   "AEFES": {
-   "price": 16.79,
+   "price": 16.77,
    "prevClose": 16.24,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -16,84 +16,84 @@
    "src": "yahoo"
   },
   "ALBTN": {
-   "price": 20.8,
+   "price": 20.82,
    "prevClose": 19.69,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ALTNY": {
-   "price": 10.54,
+   "price": 10.53,
    "prevClose": 10.05,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ANHYT": {
-   "price": 90.8,
+   "price": 90.7,
    "prevClose": 89.35,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ANSGR": {
-   "price": 22.06,
+   "price": 22.08,
    "prevClose": 22.22,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ASELS": {
-   "price": 353.75,
+   "price": 353.25,
    "prevClose": 342.25,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ASTOR": {
-   "price": 163.8,
+   "price": 163.1,
    "prevClose": 153.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "BAYRK": {
-   "price": 2.92,
+   "price": 2.93,
    "prevClose": 2.96,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "BIMAS": {
-   "price": 361.5,
+   "price": 361.25,
    "prevClose": 356.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "BMSTL": {
-   "price": 33.9,
+   "price": 33.84,
    "prevClose": 28.6,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "BRSAN": {
-   "price": 663.0,
+   "price": 662.5,
    "prevClose": 663.5,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "CCOLA": {
-   "price": 75.75,
+   "price": 75.9,
    "prevClose": 75.35,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "DOAS": {
-   "price": 131.1,
+   "price": 131.2,
    "prevClose": 134.3,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -114,7 +114,7 @@
    "src": "yahoo"
   },
   "EKGYO": {
-   "price": 16.91,
+   "price": 16.89,
    "prevClose": 16.77,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -128,21 +128,21 @@
    "src": "yahoo"
   },
   "ENKAI": {
-   "price": 80.75,
+   "price": 80.65,
    "prevClose": 80.05,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ENTRA": {
-   "price": 4.52,
+   "price": 4.53,
    "prevClose": 4.39,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "EREGL": {
-   "price": 31.3,
+   "price": 31.24,
    "prevClose": 30.02,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -163,7 +163,7 @@
    "src": "yahoo"
   },
   "GARAN": {
-   "price": 132.0,
+   "price": 131.9,
    "prevClose": 129.3,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -177,21 +177,21 @@
    "src": "yahoo"
   },
   "HALKB": {
-   "price": 40.32,
+   "price": 40.28,
    "prevClose": 40.56,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ISCTR": {
-   "price": 12.46,
+   "price": 12.44,
    "prevClose": 12.32,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "ISVEA": {
-   "price": 13.19,
+   "price": 13.21,
    "prevClose": 13.4,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -205,7 +205,7 @@
    "src": "yahoo"
   },
   "IZFAS": {
-   "price": 14.7,
+   "price": 14.76,
    "prevClose": 15.08,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -247,7 +247,7 @@
    "src": "yahoo"
   },
   "KPEKS": {
-   "price": 40.64,
+   "price": 40.52,
    "prevClose": 36.5,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -261,28 +261,28 @@
    "src": "yahoo"
   },
   "LMKDC": {
-   "price": 21.1,
+   "price": 21.12,
    "prevClose": 19.2,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "MAALT": {
-   "price": 687.0,
+   "price": 685.0,
    "prevClose": 648.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "MASFN": {
-   "price": 35.1,
+   "price": 35.04,
    "prevClose": 34.72,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "MAVI": {
-   "price": 35.2,
+   "price": 35.18,
    "prevClose": 34.34,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -303,63 +303,63 @@
    "src": "yahoo"
   },
   "MIATK": {
-   "price": 24.0,
+   "price": 23.96,
    "prevClose": 23.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "MPARK": {
-   "price": 391.5,
+   "price": 391.0,
    "prevClose": 379.5,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "NETGL": {
-   "price": 8.65,
+   "price": 9.02,
    "prevClose": 8.45,
-   "d": "2026-11-03",
+   "d": "2026-11-04",
    "prevD": "2026-11-02",
-   "src": "isyatirim"
+   "src": "yahoo"
   },
   "ORZAX": {
-   "price": 59.7,
+   "price": 59.8,
    "prevClose": 56.7,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "OTKAR": {
-   "price": 306.0,
+   "price": 305.5,
    "prevClose": 304.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "PETKM": {
-   "price": 17.28,
+   "price": 17.25,
    "prevClose": 16.51,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "PGSUS": {
-   "price": 129.7,
+   "price": 129.6,
    "prevClose": 122.2,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "POLHO": {
-   "price": 14.56,
+   "price": 14.61,
    "prevClose": 13.72,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "QUICK": {
-   "price": 41.1,
+   "price": 41.06,
    "prevClose": 39.32,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -373,28 +373,28 @@
    "src": "yahoo"
   },
   "RGYAS": {
-   "price": 173.4,
+   "price": 173.7,
    "prevClose": 167.7,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "RYSAS": {
-   "price": 28.7,
+   "price": 28.62,
    "prevClose": 25.48,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "SAHOL": {
-   "price": 83.7,
+   "price": 83.65,
    "prevClose": 83.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "SARKY": {
-   "price": 17.1,
+   "price": 17.13,
    "prevClose": 16.51,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -408,7 +408,7 @@
    "src": "yahoo"
   },
   "SISE": {
-   "price": 35.08,
+   "price": 35.04,
    "prevClose": 33.42,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -429,56 +429,56 @@
    "src": "yahoo"
   },
   "SOKM": {
-   "price": 53.2,
+   "price": 53.05,
    "prevClose": 52.9,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "SSAAT": {
-   "price": 23.4,
+   "price": 23.38,
    "prevClose": 22.24,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TAVHL": {
-   "price": 269.5,
+   "price": 269.0,
    "prevClose": 262.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TCELL": {
-   "price": 93.75,
+   "price": 93.7,
    "prevClose": 91.95,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "THYAO": {
-   "price": 271.25,
+   "price": 271.0,
    "prevClose": 261.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TKNKA": {
-   "price": 25.38,
+   "price": 25.44,
    "prevClose": 22.46,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TOASO": {
-   "price": 224.3,
+   "price": 224.1,
    "prevClose": 221.3,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TRENJ": {
-   "price": 70.95,
+   "price": 71.05,
    "prevClose": 69.6,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -492,21 +492,21 @@
    "src": "yahoo"
   },
   "TRILC": {
-   "price": 0.73,
+   "price": 0.7,
    "prevClose": 0.69,
-   "d": "2026-11-04",
+   "d": "2026-11-03",
    "prevD": "2026-11-02",
-   "src": "yahoo"
+   "src": "isyatirim"
   },
   "TRMET": {
-   "price": 104.7,
+   "price": 104.6,
    "prevClose": 98.9,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TTKOM": {
-   "price": 47.92,
+   "price": 47.9,
    "prevClose": 47.22,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -520,14 +520,14 @@
    "src": "yahoo"
   },
   "TUPRS": {
-   "price": 339.5,
+   "price": 339.25,
    "prevClose": 337.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "TUREX": {
-   "price": 5.27,
+   "price": 5.28,
    "prevClose": 5.21,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -541,7 +541,7 @@
    "src": "yahoo"
   },
   "ULUSE": {
-   "price": 141.5,
+   "price": 142.2,
    "prevClose": 128.0,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -555,14 +555,14 @@
    "src": "yahoo"
   },
   "VAKBN": {
-   "price": 30.48,
+   "price": 30.46,
    "prevClose": 29.6,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
    "src": "yahoo"
   },
   "YKBNK": {
-   "price": 34.98,
+   "price": 34.96,
    "prevClose": 35.64,
    "d": "2026-11-04",
    "prevD": "2026-11-02",
@@ -860,12 +860,12 @@
   }
  },
  "fund_errors": {},
- "usdtry": 50.0166015625,
+ "usdtry": 49.946998596191406,
  "usdtry_prev": 49.987300872802734,
- "gold_gram_try": 6486.48,
+ "gold_gram_try": 6475.68,
  "gold_prevClose": 6332.73,
  "gold_src": "vadeli (GC=F)",
- "xu100": 11223.7001953125,
+ "xu100": 11217.9404296875,
  "xu100_prevClose": 11023.599609375,
  "xu100_d": "2026-11-04",
  "spx": 7568.919921875,
