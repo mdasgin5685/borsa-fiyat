@@ -31,6 +31,8 @@ for s in need:
                  "d": v["d"], "source": f'{v["d"][8:10]}.{v["d"][5:7]} · {v["src"]} (otomatik)'}
 upd = {"updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "quotes": quotes,
        "source": f'GitHub fiyat toplayıcı ({G["generatedAt"][:16]}): BIST İş Yatırım/Yahoo, ABD/kur/altın Yahoo'}
+if G.get("funds"):  # BES fon fiyatları (TEFAS)
+    upd["funds"] = {c: {"price": f["price"], "prevClose": f["prevClose"], "d": f["d"], "name": f.get("name", "")} for c, f in G["funds"].items()}
 for k in ("usdtry", "xu100", "spx"):
     if k in G: upd[k] = round(G[k], 4)
 if "xu100_prevClose" in G: upd["xu100_changePct"] = round((G["xu100"] / G["xu100_prevClose"] - 1) * 100, 2)
@@ -61,7 +63,7 @@ for s in need:
 res = {"update": upd, "missing": missing, "stale_bist": stale, "gold_from_yahoo_ok": gold_ok,
        "day_TL": round(day, 2), "positions_value_TL": round(val, 2),
        "top": sorted(by.items(), key=lambda x: x[1], reverse=True)[:2], "bottom": sorted(by.items(), key=lambda x: x[1])[:2],
-       "xu100_changePct": upd.get("xu100_changePct"), "generatedAt": G["generatedAt"], "latest_bist_day": latest}
+       "xu100_changePct": upd.get("xu100_changePct"), "generatedAt": G["generatedAt"], "latest_bist_day": latest, "bes_funds": len(G.get("funds") or {})}
 if MODE == "aksam":
     pts = (load(f"{D}/meta/history.json") or {}).get("points", []) if os.path.exists(f"{D}/meta/history.json") else []
     qmap = {s: px(s)[0] for s in openp if px(s)[0]}
