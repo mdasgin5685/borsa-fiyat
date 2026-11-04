@@ -1,13 +1,13 @@
-[    44s] BIST 0 AEFES True
-[   196s] BIST 10 BMSTL True
-[   327s] BIST 20 EREGL True
-[   390s] BIST 30 KARCL True
-[   469s] BIST 40 MASFN True
-[   563s] BIST 50 PGSUS True
-[   624s] BIST 60 SKTAS True
-[   674s] BIST 70 TRGYO True
-[   741s] BIST 80 VAKBN True
-[   784s] BIST bitti 82
-[   790s] sektörler bitti 81
-[   799s] ABD bitti 112
+[    70s] BIST 0 AEFES True
+[   137s] BIST 10 BMSTL True
+[   319s] BIST 20 EREGL True
+[   386s] BIST 30 KARCL True
+[   422s] BIST 40 MASFN True
+[   479s] BIST 50 PGSUS True
+[   494s] BIST 60 SKTAS True
+[   513s] BIST 70 TRGYO True
+[   533s] BIST 80 VAKBN True
+[   533s] BIST bitti 82
+[   541s] sektörler bitti 81
+[   551s] ABD bitti 112
 112 şirket değerlendi; hata: 1
