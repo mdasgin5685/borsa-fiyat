@@ -104,6 +104,14 @@ def bist_one(code):
         if not ser: ERR[code] = "piyasa değeri bulunamadı"; return code, None
         last_d = max(ser); pd_now, shares, price = ser[last_d]
         pers = sorted(res)
+        # tutarlılık: son dönemin özkaynağı bir önceki dönemin 1/3'ünden az ya da 3 katından fazlaysa (birim/format değişikliği,
+        # hatalı veri) o dönemi atla ve uyarı koy
+        flag = None
+        while len(pers) >= 2:
+            a_, b_ = res[pers[-1]]["eq"], res[pers[-2]]["eq"]
+            if b_ and a_ and 1/3 <= a_ / b_ <= 3: break
+            flag = f"{pers[-1][0]}/{pers[-1][1]} bilançosu bir öncekiyle tutarsız göründüğü için kullanılmadı"
+            res.pop(pers[-1]); pers = pers[:-1]
         latest = pers[-1]
         net_ttm, eq = ttm(res, *latest), res[latest]["eq"]
         hist_pe, hist_pb = [], []
@@ -117,7 +125,8 @@ def bist_one(code):
             if res[(y, p)]["eq"] > 0: hist_pb.append(m / res[(y, p)]["eq"])
         return code, {"market": "BIST", "group": grp, "price": price, "priceDate": str(last_d), "shares": shares, "mcap": pd_now,
                       "netTTM": net_ttm, "equity": eq, "period": f"{latest[0]}/{latest[1]}",
-                      "histPE": hist_pe, "histPB": hist_pb, "histFrom": f"{HIST_FROM[0]}/{HIST_FROM[1]}"}
+                      "histPE": hist_pe, "histPB": hist_pb, "histFrom": f"{HIST_FROM[0]}/{HIST_FROM[1]}", "flag": flag,
+                      "series": {f"{y}/{p}": v for (y, p), v in res.items()}}
     except Exception as e:
         ERR[code] = f"{type(e).__name__}: {str(e)[:120]}"; return code, None
 
@@ -245,7 +254,7 @@ for c, r in data.items():
               "histPE": hpe and round(hpe, 2), "histPB": hpb and round(hpb, 2), "histN": max(len(r["histPE"]), len(r["histPB"])), "histFrom": r["histFrom"],
               "fair": {k: (round(v, 2) if v else None) for k, v in m.items()},
               "fairMid": mid and round(mid, 2), "fairLow": vals and round(min(vals), 2) or None, "fairHigh": vals and round(max(vals), 2) or None,
-              "upside": up and round(up, 1), "verdict": verdict, "cur": cur, "note": "; ".join(notes)}
+              "upside": up and round(up, 1), "verdict": verdict, "cur": cur, "note": "; ".join(notes + ([r["flag"]] if r.get("flag") else []))}
 
 json.dump({"generatedAt": now.isoformat(timespec="seconds"), "method": "sektör çarpanları + kendi geçmişi (2023 sonu →) + Graham; ortalama",
            "grahamBIST": {"pe": _bpe and round(_bpe, 2), "pb": _bpb and round(_bpb, 2), "k": round(GK_BIST, 2)}, "thresholds": {"ucuz": ">= +20%", "makul": "-15% .. +20%", "pahalı": "<= -15%"},
