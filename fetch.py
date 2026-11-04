@@ -11,6 +11,8 @@ now = dt.datetime.now(TZ)
 lines = [l.strip() for l in open("tickers.txt", encoding="utf-8") if l.strip() and not l.startswith("#")]
 BIST = [l for l in lines if not l.startswith("US:")]
 US = [l[3:] for l in lines if l.startswith("US:")]
+FUNDS = [l[4:] for l in lines if l.startswith("FON:")]
+BIST = [l for l in BIST if not l.startswith("FON:")]
 
 def last_two(df):
     """Bir kapanış serisinden (tarih, kapanış) olarak son iki seansı döndürür."""
@@ -79,10 +81,40 @@ for s in BIST:
 for t, (d, p, pd_, pc) in yahoo_closes(US).items():
     quotes[t] = {"price": round(p, 4), "prevClose": round(pc, 4), "d": d, "prevD": pd_, "src": "yahoo", "market": "US"}
 
+def tefas(code, kind="EMK"):
+    """TEFAS'tan bir fonun son iki fiyatını alır (BES fonları için kind=EMK)."""
+    import urllib.parse
+    body = urllib.parse.urlencode({"fontip": kind, "sfontur": "", "fonkod": code, "fongrup": "",
+        "bastarih": (now - dt.timedelta(days=12)).strftime("%d.%m.%Y"), "bittarih": now.strftime("%d.%m.%Y"),
+        "fonturkod": "", "fonunvantip": ""}).encode()
+    req = urllib.request.Request("https://www.tefas.gov.tr/api/DB/BindHistoryInfo", data=body, headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest", "Origin": "https://www.tefas.gov.tr",
+        "Referer": "https://www.tefas.gov.tr/TarihselVeriler.aspx",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "Accept": "application/json, text/javascript, */*; q=0.01"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        rows = json.load(r).get("data") or []
+    rows = [x for x in rows if x.get("FIYAT")]
+    rows.sort(key=lambda x: int(x["TARIH"]))
+    if not rows: return None
+    f = lambda x: dt.datetime.fromtimestamp(int(x["TARIH"]) / 1000, TZ).strftime("%Y-%m-%d")
+    a = rows[-1]; b = rows[-2] if len(rows) > 1 else rows[-1]
+    return {"price": float(a["FIYAT"]), "prevClose": float(b["FIYAT"]), "d": f(a), "prevD": f(b), "name": a.get("FONUNVAN", "")}
+
+funds = {}
+for c in FUNDS:
+    for _ in range(3):
+        try:
+            r = tefas(c)
+            if r: funds[c] = r
+            break
+        except Exception as e:
+            print("TEFAS", c, e); time.sleep(2)
+
 macro = yahoo_closes(["TRY=X", "XAUUSD=X", "GC=F", "XU100.IS", "^GSPC"])
 if "XAUUSD=X" in macro: macro["GC=F"] = macro["XAUUSD=X"]; res_gold_src = "spot"
 else: res_gold_src = "vadeli (GC=F)"
-res = {"generatedAt": now.isoformat(timespec="seconds"), "quotes": quotes, "checks": notes}
+res = {"generatedAt": now.isoformat(timespec="seconds"), "quotes": quotes, "checks": notes, "funds": funds}
 if "TRY=X" in macro:
     res["usdtry"], res["usdtry_prev"] = macro["TRY=X"][1], macro["TRY=X"][3]
 if "GC=F" in macro and "TRY=X" in macro:
@@ -95,4 +127,4 @@ for k, name in (("XU100.IS", "xu100"), ("^GSPC", "spx")):
         res[name], res[name + "_prevClose"], res[name + "_d"] = macro[k][1], macro[k][3], macro[k][0]
 
 json.dump(res, open("prices.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print(f"{len(quotes)} sembol yazıldı; kontrol gereken: {notes}")
+print(f"{len(funds)}/{len(FUNDS)} fon; {len(quotes)} sembol yazıldı; kontrol gereken: {notes}")
