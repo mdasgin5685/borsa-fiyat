@@ -28,4 +28,4 @@ jobs:
           git config user.email "fiyat-bot@users.noreply.github.com"
           git add prices.json
           git commit -m "Fiyatlar $(TZ=Europe/Istanbul date +'%F %H:%M')" || exit 0
-          git push
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done
