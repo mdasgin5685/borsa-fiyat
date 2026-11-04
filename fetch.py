@@ -23,7 +23,7 @@ def isyatirim(sym):
     url = ("https://www.isyatirim.com.tr/_layouts/15/Isyatirim.Website/Common/Data.aspx/HisseTekil"
            f"?hisse={sym}&startdate={start}&enddate={end}")
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=20) as r:
+    with urllib.request.urlopen(req, timeout=10) as r:
         rows = json.load(r).get("value") or []
     rows = [x for x in rows if x.get("HGDG_KAPANIS")]
     if len(rows) < 2: return None
@@ -47,10 +47,22 @@ def yahoo_closes(tickers):
 
 quotes, notes = {}, []
 ybist = yahoo_closes([s + ".IS" for s in BIST])
+# İş Yatırım'a erişim yoksa (ör. yurt dışı sunucudan engelleniyorsa) hepsini beklemeden Yahoo ile devam et
+from concurrent.futures import ThreadPoolExecutor
+ISY = {}
+try:
+    ISY["THYAO"] = isyatirim("THYAO")
+    ok = ISY["THYAO"] is not None
+except Exception as e:
+    ok = False; print("İş Yatırım erişilemedi:", e)
+if ok:
+    def _get(s):
+        try: return s, isyatirim(s)
+        except Exception: return s, None
+    with ThreadPoolExecutor(8) as ex:
+        for s, r in ex.map(_get, BIST): ISY[s] = r
 for s in BIST:
-    iy = None
-    try: iy = isyatirim(s); time.sleep(0.3)
-    except Exception as e: pass
+    iy = ISY.get(s)
     yh = ybist.get(s + ".IS")
     pick, src = (iy, "isyatirim") if iy else (yh, "yahoo") if yh else (None, None)
     if not pick: continue
