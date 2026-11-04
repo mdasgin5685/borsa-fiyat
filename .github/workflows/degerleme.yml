@@ -24,5 +24,5 @@ jobs:
       - if: always()
         run: |
           git config user.name "fiyat-bot"; git config user.email "bot@users.noreply.github.com"
-          git add valuation.log; [ -f valuation.json ] && git add valuation.json; git commit -m "Değerleme $(date +%Y-%m-%d)" || exit 0
+          git add valuation.log; [ -f valuation_raw.json ] && git add valuation_raw.json; [ -f valuation.json ] && git add valuation.json; git commit -m "Değerleme $(date +%Y-%m-%d)" || exit 0
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 5; done
