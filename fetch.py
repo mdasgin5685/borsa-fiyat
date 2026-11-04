@@ -133,8 +133,13 @@ def fund_price(code):
     FUND_ERR[code] = errs
     return None
 
-funds = {}
+# BES fonları ayda bir yeter: bu ay zaten alındıysa önceki değerleri taşı
+try: old_funds = json.load(open("prices.json", encoding="utf-8")).get("funds") or {}
+except Exception: old_funds = {}
+ym = now.strftime("%Y-%m")
+funds = {c: f for c, f in old_funds.items() if c in FUNDS and str(f.get("d", ""))[:7] == ym}
 for c in FUNDS:
+    if c in funds: continue
     r = fund_price(c)
     if r: funds[c] = r
 
