@@ -4,6 +4,9 @@ on:
     - cron: "40 8 * * 1-5"    # 11:40 İstanbul (gün içi)
     - cron: "20 15 * * 1-5"   # 18:20 İstanbul (kapanış)
   workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["fetch.py", "tickers.txt", ".github/workflows/fiyatlar.yml"]
 permissions:
   contents: write
 jobs:
