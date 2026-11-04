@@ -81,40 +81,53 @@ for s in BIST:
 for t, (d, p, pd_, pc) in yahoo_closes(US).items():
     quotes[t] = {"price": round(p, 4), "prevClose": round(pc, 4), "d": d, "prevD": pd_, "src": "yahoo", "market": "US"}
 
-def tefas(code, kind="EMK"):
-    """TEFAS'tan bir fonun son iki fiyatını alır (BES fonları için kind=EMK)."""
-    import urllib.parse
+FUND_ERR = {}
+def _tefas_host(host, code, kind="EMK"):
+    import urllib.parse, http.cookiejar
+    cj = http.cookiejar.CookieJar(); op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+    try: op.open(urllib.request.Request(f"https://{host}/TarihselVeriler.aspx", headers={"User-Agent": ua}), timeout=15).read()
+    except Exception: pass
     body = urllib.parse.urlencode({"fontip": kind, "sfontur": "", "fonkod": code, "fongrup": "",
         "bastarih": (now - dt.timedelta(days=12)).strftime("%d.%m.%Y"), "bittarih": now.strftime("%d.%m.%Y"),
         "fonturkod": "", "fonunvantip": ""}).encode()
-    req = urllib.request.Request("https://www.tefas.gov.tr/api/DB/BindHistoryInfo", data=body, headers={
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
-        "X-Requested-With": "XMLHttpRequest", "Origin": "https://www.tefas.gov.tr",
-        "Referer": "https://www.tefas.gov.tr/TarihselVeriler.aspx",
+    req = urllib.request.Request(f"https://{host}/api/DB/BindHistoryInfo", data=body, headers={"User-Agent": ua,
+        "X-Requested-With": "XMLHttpRequest", "Origin": f"https://{host}", "Referer": f"https://{host}/TarihselVeriler.aspx",
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "Accept": "application/json, text/javascript, */*; q=0.01"})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        rows = json.load(r).get("data") or []
-    rows = [x for x in rows if x.get("FIYAT")]
-    rows.sort(key=lambda x: int(x["TARIH"]))
-    if not rows: return None
+    raw = op.open(req, timeout=20).read().decode("utf-8", "replace")
+    try: rows = json.loads(raw).get("data") or []
+    except Exception: raise RuntimeError("json değil: " + raw[:120].replace("\n", " "))
+    rows = [x for x in rows if x.get("FIYAT")]; rows.sort(key=lambda x: int(x["TARIH"]))
+    if not rows: raise RuntimeError("boş veri")
     f = lambda x: dt.datetime.fromtimestamp(int(x["TARIH"]) / 1000, TZ).strftime("%Y-%m-%d")
     a = rows[-1]; b = rows[-2] if len(rows) > 1 else rows[-1]
-    return {"price": float(a["FIYAT"]), "prevClose": float(b["FIYAT"]), "d": f(a), "prevD": f(b), "name": a.get("FONUNVAN", "")}
+    return {"price": float(a["FIYAT"]), "prevClose": float(b["FIYAT"]), "d": f(a), "prevD": f(b), "name": a.get("FONUNVAN", ""), "src": host}
+
+def _fintables(code):
+    import re
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+    raw = urllib.request.urlopen(urllib.request.Request(f"https://fintables.com/fonlar/{code}", headers={"User-Agent": ua}), timeout=20).read().decode("utf-8", "replace")
+    m = re.search(r'"price"\s*:\s*"?([0-9.]+)', raw) or re.search(r'Fiyat[^0-9]{0,80}([0-9]+,[0-9]{4,6})', raw)
+    if not m: raise RuntimeError("fiyat bulunamadı (%d bayt)" % len(raw))
+    return {"price": float(m.group(1).replace(",", ".")), "prevClose": None, "d": now.strftime("%Y-%m-%d"), "src": "fintables"}
+
+def fund_price(code):
+    errs = []
+    for fn in (lambda: _tefas_host("www.tefas.gov.tr", code), lambda: _tefas_host("www.fundturkey.com.tr", code), lambda: _fintables(code)):
+        try: return fn()
+        except Exception as e: errs.append(f"{type(e).__name__}: {str(e)[:120]}")
+    FUND_ERR[code] = errs
+    return None
 
 funds = {}
 for c in FUNDS:
-    for _ in range(3):
-        try:
-            r = tefas(c)
-            if r: funds[c] = r
-            break
-        except Exception as e:
-            print("TEFAS", c, e); time.sleep(2)
+    r = fund_price(c)
+    if r: funds[c] = r
 
 macro = yahoo_closes(["TRY=X", "XAUUSD=X", "GC=F", "XU100.IS", "^GSPC"])
 if "XAUUSD=X" in macro: macro["GC=F"] = macro["XAUUSD=X"]; res_gold_src = "spot"
 else: res_gold_src = "vadeli (GC=F)"
-res = {"generatedAt": now.isoformat(timespec="seconds"), "quotes": quotes, "checks": notes, "funds": funds}
+res = {"generatedAt": now.isoformat(timespec="seconds"), "quotes": quotes, "checks": notes, "funds": funds, "fund_errors": FUND_ERR}
 if "TRY=X" in macro:
     res["usdtry"], res["usdtry_prev"] = macro["TRY=X"][1], macro["TRY=X"][3]
 if "GC=F" in macro and "TRY=X" in macro:
