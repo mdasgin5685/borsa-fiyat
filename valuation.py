@@ -9,7 +9,10 @@ Sonuç valuation.json'a yazılır. Bu bir yatırım tavsiyesi değildir; yöntem
 import json, math, time, statistics as st, datetime as dt, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
-import yfinance as yf
+try:
+    import yfinance as yf
+except ImportError:
+    yf = None  # VAL_OFFLINE ile yerel deneme
 
 TZ = ZoneInfo("Europe/Istanbul")
 now = dt.datetime.now(TZ)
@@ -48,12 +51,11 @@ def mali(code):
         res = {}
         for i in range(0, len(ps), 4):
             chunk = ps[i:i + 4]
+            while len(chunk) < 4: chunk = chunk + [ps[0]]  # uç nokta tam 4 dönem istiyor
             q = "&".join(f"year{j+1}={y}&period{j+1}={p}" for j, (y, p) in enumerate(chunk))
             try: rows = get(B + f"MaliTablo?companyCode={code}&exchange=TRY&financialGroup={grp}&{q}").get("value") or []
             except Exception: rows = []
-            if not rows:
-                if i == 0: break
-                continue
+            if not rows: continue
             for j, per in enumerate(chunk):
                 net = eq = None
                 for r in rows:
@@ -204,6 +206,10 @@ def peers(c):
             return key, ps, (med(pe) if len(pe) >= 3 else None), (med(pb) if len(pb) >= 3 else None)
     return None, [], None, None
 
+# Graham'ın 22,5'i (F/K 15 × PD/DD 1,5) ABD içindir; BIST'te piyasanın kendi medyan F/K × PD/DD'si kullanılır
+_bpe = med([x["pe"] for x in data.values() if x["market"] == "BIST" and x["pe"] and x["pe"] < 80])
+_bpb = med([x["pb"] for x in data.values() if x["market"] == "BIST" and x["pb"] and x["pb"] < 30])
+GK_BIST = (_bpe or 15) * (_bpb or 1.5)
 out = {}
 for c, r in data.items():
     sh, net, eq, price = r["shares"], r.get("netTTM"), r.get("equity"), r["price"]
@@ -215,7 +221,9 @@ for c, r in data.items():
         if pb and eq and eq > 0: v.append(eq * pb / sh)
         return sum(v) / len(v) if v else None
     m = {"sector": fair(spe, spb), "history": fair(hpe, hpb)}
-    m["graham"] = math.sqrt(22.5 * r["eps"] * r["bvps"]) if r["eps"] and r["bvps"] and r["eps"] > 0 and r["bvps"] > 0 else None
+    fin = any(k in (r.get("industry") or "") for k in ("Bank", "Insurance", "Credit", "Conglomerate", "REIT", "Capital Markets", "Asset Management"))
+    gk = 22.5 if r["market"] == "US" else GK_BIST
+    m["graham"] = math.sqrt(gk * r["eps"] * r["bvps"]) if not fin and r["eps"] and r["bvps"] and r["eps"] > 0 and r["bvps"] > 0 else None
     vals = [v for v in m.values() if v]
     mid = sum(vals) / len(vals) if vals else None
     up = (mid / price - 1) * 100 if mid and price else None
@@ -240,6 +248,6 @@ for c, r in data.items():
               "upside": up and round(up, 1), "verdict": verdict, "cur": cur, "note": "; ".join(notes)}
 
 json.dump({"generatedAt": now.isoformat(timespec="seconds"), "method": "sektör çarpanları + kendi geçmişi (2023 sonu →) + Graham; ortalama",
-           "thresholds": {"ucuz": ">= +20%", "makul": "-15% .. +20%", "pahalı": "<= -15%"},
+           "grahamBIST": {"pe": _bpe and round(_bpe, 2), "pb": _bpb and round(_bpb, 2), "k": round(GK_BIST, 2)}, "thresholds": {"ucuz": ">= +20%", "makul": "-15% .. +20%", "pahalı": "<= -15%"},
            "items": out, "errors": ERR}, open("valuation.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"{len(out)} şirket değerlendi; hata: {len(ERR)}")
