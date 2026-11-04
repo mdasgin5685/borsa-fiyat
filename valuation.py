@@ -158,16 +158,23 @@ def sector_of(code):
         return code, (None, None, None)
 
 # ---------------------------------------------------------------- çalıştır
+import sys
+T0 = time.time()
+def log(*a): print(f"[{time.time()-T0:6.0f}s]", *a, flush=True)
 data = {}
 with ThreadPoolExecutor(6) as ex:
-    for c, r in ex.map(bist_one, BIST):
+    for k, (c, r) in enumerate(ex.map(bist_one, BIST)):
         if r: data[c] = r
+        if k % 10 == 0: log("BIST", k, c, bool(r))
+log("BIST bitti", len(data))
 with ThreadPoolExecutor(4) as ex:
-    for c, (s, i, n) in ex.map(sector_of, list(data)):
-        data[c].update(sector=s, industry=i, name=n)
+    for c, (s_, i, n) in ex.map(sector_of, list(data)):
+        data[c].update(sector=s_, industry=i, name=n)
+log("sektörler bitti", sum(1 for x in data.values() if x.get("sector")))
 with ThreadPoolExecutor(4) as ex:
     for c, r in ex.map(us_one, US):
         if r: data[c] = r
+log("ABD bitti", len(data))
 
 TR_SECTOR = {"Financial Services": "Finans", "Industrials": "Sanayi", "Consumer Cyclical": "Döngüsel tüketim", "Consumer Defensive": "Temel tüketim",
              "Energy": "Enerji", "Basic Materials": "Temel malzeme", "Technology": "Teknoloji", "Communication Services": "İletişim",
