@@ -57,14 +57,18 @@ except Exception as e:
     ok = False; print("İş Yatırım erişilemedi:", e)
 if ok:
     def _get(s):
-        try: return s, isyatirim(s)
-        except Exception: return s, None
+        for _ in range(3):
+            try: return s, isyatirim(s)
+            except Exception: time.sleep(1.5)
+        return s, None
     with ThreadPoolExecutor(8) as ex:
         for s, r in ex.map(_get, BIST): ISY[s] = r
 for s in BIST:
     iy = ISY.get(s)
     yh = ybist.get(s + ".IS")
-    pick, src = (iy, "isyatirim") if iy else (yh, "yahoo") if yh else (None, None)
+    # Aynı gün ise İş Yatırım (resmi kapanış) öncelikli; gün içinde Yahoo bugünün anlık çubuğunu verir, o daha yeniyse onu al
+    if iy and yh: pick, src = (yh, "yahoo") if yh[0] > iy[0] else (iy, "isyatirim")
+    else: pick, src = (iy, "isyatirim") if iy else (yh, "yahoo") if yh else (None, None)
     if not pick: continue
     d, p, pd_, pc = pick
     q = {"price": round(p, 4), "prevClose": round(pc, 4), "d": d, "prevD": pd_, "src": src}
@@ -75,7 +79,9 @@ for s in BIST:
 for t, (d, p, pd_, pc) in yahoo_closes(US).items():
     quotes[t] = {"price": round(p, 4), "prevClose": round(pc, 4), "d": d, "prevD": pd_, "src": "yahoo", "market": "US"}
 
-macro = yahoo_closes(["TRY=X", "GC=F", "XU100.IS", "^GSPC"])
+macro = yahoo_closes(["TRY=X", "XAUUSD=X", "GC=F", "XU100.IS", "^GSPC"])
+if "XAUUSD=X" in macro: macro["GC=F"] = macro["XAUUSD=X"]; res_gold_src = "spot"
+else: res_gold_src = "vadeli (GC=F)"
 res = {"generatedAt": now.isoformat(timespec="seconds"), "quotes": quotes, "checks": notes}
 if "TRY=X" in macro:
     res["usdtry"], res["usdtry_prev"] = macro["TRY=X"][1], macro["TRY=X"][3]
@@ -83,6 +89,7 @@ if "GC=F" in macro and "TRY=X" in macro:
     oz = 31.1034768
     res["gold_gram_try"] = round(macro["GC=F"][1] * macro["TRY=X"][1] / oz, 2)
     res["gold_prevClose"] = round(macro["GC=F"][3] * macro["TRY=X"][3] / oz, 2)
+    res["gold_src"] = res_gold_src
 for k, name in (("XU100.IS", "xu100"), ("^GSPC", "spx")):
     if k in macro:
         res[name], res[name + "_prevClose"], res[name + "_d"] = macro[k][1], macro[k][3], macro[k][0]
