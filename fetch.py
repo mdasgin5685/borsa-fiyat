@@ -111,9 +111,23 @@ def _fintables(code):
     if not m: raise RuntimeError("fiyat bulunamadı (%d bayt)" % len(raw))
     return {"price": float(m.group(1).replace(",", ".")), "prevClose": None, "d": now.strftime("%Y-%m-%d"), "src": "fintables"}
 
+def _tefas_new(code):
+    """TEFAS'ın 2026'daki yeni API'si: fon başına, son 1 ay."""
+    req = urllib.request.Request("https://www.tefas.gov.tr/api/funds/fonFiyatBilgiGetir",
+        data=json.dumps({"fonKodu": code, "dil": "TR", "periyod": 1}).encode(), headers={
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Content-Type": "application/json", "Accept": "application/json, text/plain, */*"})
+    rows = json.load(urllib.request.urlopen(req, timeout=30)).get("resultList") or []
+    rows = [x for x in rows if x.get("fiyat") and x.get("tarih")]
+    rows.sort(key=lambda x: str(x["tarih"])[:10])
+    if not rows: raise RuntimeError("boş veri")
+    a = rows[-1]; b = rows[-2] if len(rows) > 1 else rows[-1]
+    return {"price": float(a["fiyat"]), "prevClose": float(b["fiyat"]), "d": str(a["tarih"])[:10], "prevD": str(b["tarih"])[:10],
+            "name": a.get("fonUnvan", ""), "src": "tefas"}
+
 def fund_price(code):
     errs = []
-    for fn in (lambda: _tefas_host("www.tefas.gov.tr", code), lambda: _tefas_host("www.fundturkey.com.tr", code), lambda: _fintables(code)):
+    for fn in (lambda: _tefas_new(code), lambda: _tefas_host("www.tefas.gov.tr", code), lambda: _fintables(code)):
         try: return fn()
         except Exception as e: errs.append(f"{type(e).__name__}: {str(e)[:120]}")
     FUND_ERR[code] = errs
