@@ -157,7 +157,7 @@ def us_one(t):
                    "mcap": float(price) * float(shares), "netTTM": (eps or 0) * shares if eps is not None else None,
                    "equity": (bvps or 0) * shares if bvps is not None else None, "period": "son 12 ay",
                    "histPE": hist_pe, "histPB": hist_pb, "histFrom": "yıllık, son 4 yıl",
-                   "sector": inf.get("sector"), "industry": inf.get("industry"), "name": inf.get("shortName")}
+                   "sector": inf.get("sector"), "industry": inf.get("industry"), "name": inf.get("shortName"), "totalDebt": inf.get("totalDebt")}
     except Exception as e:
         ERR[t] = f"{type(e).__name__}: {str(e)[:120]}"; return t, None
 
@@ -235,6 +235,15 @@ for c, r in data.items():
     m["graham"] = math.sqrt(gk * r["eps"] * r["bvps"]) if not fin and r["eps"] and r["bvps"] and r["eps"] > 0 and r["bvps"] > 0 else None
     vals = [v for v in m.values() if v]
     mid = sum(vals) / len(vals) if vals else None
+    # güvenilirlik: zarar eden ya da aşırı borçlu şirkette "kağıt üstü değer" anlamsızdır
+    block = None
+    if not net or net <= 0:
+        block = "son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
+    debt = r.get("totalDebt")
+    if debt and r["mcap"] and debt > 3 * r["mcap"]:
+        block = f"borcu piyasa değerinin {fmt(debt / r['mcap'], 0)} katı; iflas/yeniden yapılandırma riski olan şirkette değerleme anlamsız"
+    if block:
+        mid = None; vals = []
     up = (mid / price - 1) * 100 if mid and price else None
     # kısa açıklama
     cur = "$" if r["market"] == "US" else "₺"
@@ -249,6 +258,11 @@ for c, r in data.items():
         prev_ = ttm(res_, y_ - 1, p_)
         if prev_ and prev_ > 0 and net and net / prev_ > 3:
             notes.append(f"son 12 aylık kâr bir yıl öncekinin {fmt(net / prev_, 0)} katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur")
+    if r["market"] == "US" and price < 1:
+        notes.append("hisse 1 doların altında; borsadan çıkarılma riski var")
+    if block: notes.append(block)
+    elif up is not None and up > 150:
+        notes.append(f"fark çok büyük (%{fmt(up, 0)}); genelde tek seferlik kâr ya da veri hatası işaretidir, kontrol edilmeli")
     verdict = None
     if up is not None:
         verdict = "ucuz" if up >= 20 else "makul" if up > -15 else "pahalı"

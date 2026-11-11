@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T15:33:58+03:00",
+ "generatedAt": "2026-11-11T16:37:30+03:00",
  "method": "sektör çarpanları + kendi geçmişi (2023 sonu →) + Graham; ortalama",
  "grahamBIST": {
   "pe": 9.54,
@@ -142,13 +142,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 22.62,
-   "fairLow": 22.62,
-   "fairHigh": 22.62,
-   "upside": 12.2,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,13 (sektör 1,27, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,13 (sektör 1,27, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "ALTNY": {
    "market": "BIST",
@@ -440,13 +440,13 @@
     "history": 4.33,
     "graham": null
    },
-   "fairMid": 2.51,
-   "fairLow": 0.69,
-   "fairHigh": 4.33,
-   "upside": -12.5,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 3,57 (sektör 0,86, kendi ortalaması 5,39)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 3,57 (sektör 0,86, kendi ortalaması 5,39); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "BIMAS": {
    "market": "BIST",
@@ -525,13 +525,13 @@
     "history": 31.53,
     "graham": null
    },
-   "fairMid": 21.2,
-   "fairLow": 10.87,
-   "fairHigh": 31.53,
-   "upside": -32.6,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,54 (sektör 1,91, kendi ortalaması 5,55)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,54 (sektör 1,91, kendi ortalaması 5,55); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "BRSAN": {
    "market": "BIST",
@@ -757,7 +757,7 @@
    "upside": 528.1,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 5,2 (sektör 4,6, kendi ortalaması 69,9); PD/DD 1,72 (sektör 0,98, kendi ortalaması 17,69)"
+   "note": "F/K 5,2 (sektör 4,6, kendi ortalaması 69,9); PD/DD 1,72 (sektör 0,98, kendi ortalaması 17,69); fark çok büyük (%528); genelde tek seferlik kâr ya da veri hatası işaretidir, kontrol edilmeli"
   },
   "EKGYO": {
    "market": "BIST",
@@ -792,13 +792,13 @@
     "history": 20.53,
     "graham": null
    },
-   "fairMid": 21.61,
-   "fairLow": 20.53,
-   "fairHigh": 22.68,
-   "upside": 30.4,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,56, kendi ortalaması 0,51)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,56, kendi ortalaması 0,51); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "EKIM": {
    "market": "BIST",
@@ -842,13 +842,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 15.7,
-   "fairLow": 15.7,
-   "fairHigh": 15.7,
-   "upside": 8.6,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,57 (sektör 0,62, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,57 (sektör 0,62, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "ENKAI": {
    "market": "BIST",
@@ -933,13 +933,13 @@
     "history": 5.75,
     "graham": null
    },
-   "fairMid": 7.02,
-   "fairLow": 5.75,
-   "fairHigh": 8.28,
-   "upside": 58.4,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,76, kendi ortalaması 0,53)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,76, kendi ortalaması 0,53); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "EREGL": {
    "market": "BIST",
@@ -1306,13 +1306,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 6.95,
-   "fairLow": 6.95,
-   "fairHigh": 6.95,
-   "upside": -45.3,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,17 (sektör 1,19, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,17 (sektör 1,19, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "IZENR": {
    "market": "BIST",
@@ -1347,13 +1347,13 @@
     "history": 8.85,
     "graham": null
    },
-   "fairMid": 7.51,
-   "fairLow": 6.18,
-   "fairHigh": 8.85,
-   "upside": 123.6,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,76, kendi ortalaması 1,08)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 0,76, kendi ortalaması 1,08); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "IZFAS": {
    "market": "BIST",
@@ -1391,13 +1391,13 @@
     "history": 52.4,
     "graham": null
    },
-   "fairMid": 27.93,
-   "fairLow": 3.47,
-   "fairHigh": 52.4,
-   "upside": 95.9,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,76 (sektör 1,40, kendi ortalaması 21,16)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,76 (sektör 1,40, kendi ortalaması 21,16); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "KARCL": {
    "market": "BIST",
@@ -1432,13 +1432,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 28.87,
-   "fairLow": 28.87,
-   "fairHigh": 28.87,
-   "upside": 11.0,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,91 (sektör 2,12, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,91 (sektör 2,12, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "KATMR": {
    "market": "BIST",
@@ -1488,7 +1488,7 @@
    "upside": 160.5,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 4,5 (sektör 12,2, kendi ortalaması 7,1); PD/DD 0,22 (sektör 0,62, kendi ortalaması 0,55)"
+   "note": "F/K 4,5 (sektör 12,2, kendi ortalaması 7,1); PD/DD 0,22 (sektör 0,62, kendi ortalaması 0,55); fark çok büyük (%161); genelde tek seferlik kâr ya da veri hatası işaretidir, kontrol edilmeli"
   },
   "KCHOL": {
    "market": "BIST",
@@ -1616,13 +1616,13 @@
     "history": 17.46,
     "graham": null
    },
-   "fairMid": 9.7,
-   "fairLow": 1.93,
-   "fairHigh": 17.46,
-   "upside": 338.7,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,55 (sektör 0,48, kendi ortalaması 4,31)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,55 (sektör 0,48, kendi ortalaması 4,31); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "KPEKS": {
    "market": "BIST",
@@ -1666,13 +1666,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 26.39,
-   "fairLow": 26.39,
-   "fairHigh": 26.39,
-   "upside": -31.1,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,73 (sektör 1,19, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,73 (sektör 1,19, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "KTLEV": {
    "market": "BIST",
@@ -1721,7 +1721,7 @@
    "upside": 351.4,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 0,9 (sektör 4,9, kendi ortalaması 5,5); PD/DD 0,77 (sektör 0,99, kendi ortalaması 3,90); son 12 aylık kâr bir yıl öncekinin 7 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur"
+   "note": "F/K 0,9 (sektör 4,9, kendi ortalaması 5,5); PD/DD 0,77 (sektör 0,99, kendi ortalaması 3,90); son 12 aylık kâr bir yıl öncekinin 7 katı; bu sıçrama kalıcı değilse hesaplanan değer abartılı olur; fark çok büyük (%351); genelde tek seferlik kâr ya da veri hatası işaretidir, kontrol edilmeli"
   },
   "LMKDC": {
    "market": "BIST",
@@ -1815,13 +1815,13 @@
     "history": 1350.05,
     "graham": null
    },
-   "fairMid": 1038.7,
-   "fairLow": 727.36,
-   "fairHigh": 1350.05,
-   "upside": 56.8,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,94 (sektör 1,04, kendi ortalaması 1,92)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,94 (sektör 1,04, kendi ortalaması 1,92); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "MASFN": {
    "market": "BIST",
@@ -1856,13 +1856,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 7.74,
-   "fairLow": 7.74,
-   "fairHigh": 7.74,
-   "upside": -77.5,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,83 (sektör 0,41, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,83 (sektör 0,41, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "MAVI": {
    "market": "BIST",
@@ -1947,13 +1947,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 11.03,
-   "fairLow": 11.03,
-   "fairHigh": 11.03,
-   "upside": -45.7,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,76 (sektör 0,41, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,76 (sektör 0,41, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "MGROS": {
    "market": "BIST",
@@ -2028,13 +2028,13 @@
     "history": 47.77,
     "graham": null
    },
-   "fairMid": 47.77,
-   "fairLow": 47.77,
-   "fairHigh": 47.77,
-   "upside": 107.7,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,89 (sektör —, kendi ortalaması 3,92)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,89 (sektör —, kendi ortalaması 3,92); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "MPARK": {
    "market": "BIST",
@@ -2107,13 +2107,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 8.52,
-   "fairLow": 8.52,
-   "fairHigh": 8.52,
-   "upside": -1.5,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 0,50, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 0,50, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "ORZAX": {
    "market": "BIST",
@@ -2151,13 +2151,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 14.64,
-   "fairLow": 14.64,
-   "fairHigh": 14.64,
-   "upside": -74.6,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,52 (sektör 1,40, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 5,52 (sektör 1,40, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "OTKAR": {
    "market": "BIST",
@@ -2201,13 +2201,13 @@
     "history": 292.51,
     "graham": null
    },
-   "fairMid": 166.0,
-   "fairLow": 39.49,
-   "fairHigh": 292.51,
-   "upside": -44.9,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 6,56 (sektör 0,86, kendi ortalaması 6,37)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 6,56 (sektör 0,86, kendi ortalaması 6,37); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "PETKM": {
    "market": "BIST",
@@ -2251,13 +2251,13 @@
     "history": 20.31,
     "graham": null
    },
-   "fairMid": 29.0,
-   "fairLow": 20.31,
-   "fairHigh": 37.69,
-   "upside": 70.6,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,57 (sektör 1,27, kendi ortalaması 0,68)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,57 (sektör 1,27, kendi ortalaması 0,68); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "PGSUS": {
    "market": "BIST",
@@ -2351,13 +2351,13 @@
     "history": 14.64,
     "graham": null
    },
-   "fairMid": 19.47,
-   "fairLow": 14.64,
-   "fairHigh": 24.3,
-   "upside": 38.1,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,74 (sektör 1,27, kendi ortalaması 0,77)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,74 (sektör 1,27, kendi ortalaması 0,77); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "QUICK": {
    "market": "BIST",
@@ -2400,13 +2400,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 57.5,
-   "fairLow": 57.5,
-   "fairHigh": 57.5,
-   "upside": 44.4,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,69 (sektör 0,99, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,69 (sektör 0,99, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "REEDR": {
    "market": "BIST",
@@ -2437,13 +2437,13 @@
     "history": 11.84,
     "graham": null
    },
-   "fairMid": 11.84,
-   "fairLow": 11.84,
-   "fairHigh": 11.84,
-   "upside": 364.2,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,33 (sektör —, kendi ortalaması 1,51)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,33 (sektör —, kendi ortalaması 1,51); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "RGYAS": {
    "market": "BIST",
@@ -2672,13 +2672,13 @@
     "history": 4.37,
     "graham": null
    },
-   "fairMid": 4.24,
-   "fairLow": 4.11,
-   "fairHigh": 4.37,
-   "upside": 182.4,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 1,12, kendi ortalaması 1,19)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,41 (sektör 1,12, kendi ortalaması 1,19); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "SISE": {
    "market": "BIST",
@@ -2764,13 +2764,13 @@
     "history": 3.0,
     "graham": null
    },
-   "fairMid": 4.47,
-   "fairLow": 3.0,
-   "fairHigh": 5.93,
-   "upside": 291.8,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,22 (sektör 1,12, kendi ortalaması 0,57)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,22 (sektör 1,12, kendi ortalaması 0,57); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "SOHOE": {
    "market": "BIST",
@@ -2814,13 +2814,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 15.32,
-   "fairLow": 15.32,
-   "fairHigh": 15.32,
-   "upside": 126.0,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 1,12, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 1,12, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "SOKM": {
    "market": "BIST",
@@ -2864,13 +2864,13 @@
     "history": 48.95,
     "graham": null
    },
-   "fairMid": 62.24,
-   "fairLow": 48.95,
-   "fairHigh": 75.52,
-   "upside": 18.7,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,78 (sektör 1,12, kendi ortalaması 0,73)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,78 (sektör 1,12, kendi ortalaması 0,73); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "SSAAT": {
    "market": "BIST",
@@ -2914,13 +2914,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 4.63,
-   "fairLow": 4.63,
-   "fairHigh": 4.63,
-   "upside": -79.6,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 4,21 (sektör 0,86, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 4,21 (sektör 0,86, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TAVHL": {
    "market": "BIST",
@@ -3057,7 +3057,7 @@
    "upside": 169.9,
    "verdict": "ucuz",
    "cur": "₺",
-   "note": "F/K 2,5 (sektör 12,2, kendi ortalaması 2,6); PD/DD 0,32 (sektör 0,62, kendi ortalaması 0,52)"
+   "note": "F/K 2,5 (sektör 12,2, kendi ortalaması 2,6); PD/DD 0,32 (sektör 0,62, kendi ortalaması 0,52); fark çok büyük (%170); genelde tek seferlik kâr ya da veri hatası işaretidir, kontrol edilmeli"
   },
   "TKNKA": {
    "market": "BIST",
@@ -3101,13 +3101,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 53.62,
-   "fairLow": 53.62,
-   "fairHigh": 53.62,
-   "upside": 124.5,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 1,12, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,50 (sektör 1,12, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TOASO": {
    "market": "BIST",
@@ -3279,13 +3279,13 @@
     "history": 1.78,
     "graham": null
    },
-   "fairMid": 1.78,
-   "fairLow": 1.78,
-   "fairHigh": 1.78,
-   "upside": 154.8,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,51 (sektör —, kendi ortalaması 1,29)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,51 (sektör —, kendi ortalaması 1,29); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TRMET": {
    "market": "BIST",
@@ -3410,13 +3410,13 @@
     "history": 3.46,
     "graham": null
    },
-   "fairMid": 6.43,
-   "fairLow": 3.46,
-   "fairHigh": 9.41,
-   "upside": 280.8,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,37 (sektör 2,05, kendi ortalaması 0,75)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,37 (sektör 2,05, kendi ortalaması 0,75); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TUPRS": {
    "market": "BIST",
@@ -3634,13 +3634,13 @@
     "history": 2.47,
     "graham": null
    },
-   "fairMid": 2.07,
-   "fairLow": 1.67,
-   "fairHigh": 2.47,
-   "upside": 430.0,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "₺",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,15 (sektör 0,62, kendi ortalaması 0,92)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,15 (sektör 0,62, kendi ortalaması 0,92); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "VAKBN": {
    "market": "BIST",
@@ -3999,13 +3999,13 @@
     "history": 0.81,
     "graham": null
    },
-   "fairMid": 0.81,
-   "fairLow": 0.81,
-   "fairHigh": 0.81,
-   "upside": 15.8,
-   "verdict": "makul",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,02 (sektör —, kendi ortalaması 2,33)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,02 (sektör —, kendi ortalaması 2,33); hisse 1 doların altında; borsadan çıkarılma riski var; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "CLBT": {
    "market": "US",
@@ -4085,13 +4085,13 @@
     "history": 269.13,
     "graham": null
    },
-   "fairMid": 190.61,
-   "fairLow": 112.09,
-   "fairHigh": 269.13,
-   "upside": 31.0,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,76 (sektör 2,13, kendi ortalaması 5,11)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 2,76 (sektör 2,13, kendi ortalaması 5,11); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "ENVA": {
    "market": "US",
@@ -4170,7 +4170,7 @@
    "upside": null,
    "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,83"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,83; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "HAIN": {
    "market": "US",
@@ -4205,13 +4205,13 @@
     "history": 0.84,
     "graham": null
    },
-   "fairMid": 6.3,
-   "fairLow": 0.84,
-   "fairHigh": 11.76,
-   "upside": 4249.4,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,09 (sektör 6,91, kendi ortalaması 0,49)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,09 (sektör 6,91, kendi ortalaması 0,49); hisse 1 doların altında; borsadan çıkarılma riski var; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "INV": {
    "market": "US",
@@ -4247,13 +4247,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 6.94,
-   "fairLow": 6.94,
-   "fairHigh": 6.94,
-   "upside": 2594.1,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,10 (sektör 2,76, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 0,10 (sektör 2,76, kendi ortalaması —); hisse 1 doların altında; borsadan çıkarılma riski var; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "KO": {
    "market": "US",
@@ -4335,7 +4335,7 @@
    "upside": null,
    "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; hisse 1 doların altında; borsadan çıkarılma riski var; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "LFTO": {
    "market": "US",
@@ -4488,13 +4488,13 @@
     "history": 1.71,
     "graham": null
    },
-   "fairMid": 1.71,
-   "fairLow": 1.71,
-   "fairHigh": 1.71,
-   "upside": 35.7,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,22 (sektör —, kendi ortalaması 1,65)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 1,22 (sektör —, kendi ortalaması 1,65); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "MU": {
    "market": "US",
@@ -4576,13 +4576,13 @@
     "history": null,
     "graham": null
    },
-   "fairMid": 41.63,
-   "fairLow": 41.63,
-   "fairHigh": 41.63,
-   "upside": 67.9,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 4,90 (sektör 8,22, kendi ortalaması —)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 4,90 (sektör 8,22, kendi ortalaması —); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "NRIM": {
    "market": "US",
@@ -4696,13 +4696,13 @@
     "history": 17.19,
     "graham": null
    },
-   "fairMid": 17.19,
-   "fairLow": 17.19,
-   "fairHigh": 17.19,
-   "upside": 109.1,
-   "verdict": "ucuz",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 3,26 (sektör —, kendi ortalaması 6,81)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 3,26 (sektör —, kendi ortalaması 6,81); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "PYXS": {
    "market": "US",
@@ -4733,13 +4733,13 @@
     "history": 0.13,
     "graham": null
    },
-   "fairMid": 0.13,
-   "fairLow": 0.13,
-   "fairHigh": 0.13,
-   "upside": -92.2,
-   "verdict": "pahalı",
+   "fairMid": null,
+   "fairLow": null,
+   "fairHigh": null,
+   "upside": null,
+   "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 9,11 (sektör —, kendi ortalaması 0,71)"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; PD/DD 9,11 (sektör —, kendi ortalaması 0,71); son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "SEZL": {
    "market": "US",
@@ -4862,7 +4862,7 @@
    "upside": null,
    "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "STRO": {
    "market": "US",
@@ -4903,7 +4903,7 @@
    "upside": null,
    "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TNON": {
    "market": "US",
@@ -4945,7 +4945,7 @@
    "upside": null,
    "verdict": null,
    "cur": "$",
-   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor"
+   "note": "son 12 ayda zarar ettiği için F/K hesaplanamıyor; son 12 ayda zarar ettiği için değer hesaplanmadı; yalnızca özsermayeye bakmak yanıltıcı olur (zarar özsermayeyi eritir)"
   },
   "TPR": {
    "market": "US",
