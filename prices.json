@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T19:20:27+03:00",
+ "generatedAt": "2026-11-26T19:54:53+03:00",
  "quotes": {
   "AEFES": {
    "price": 15.04,
@@ -111,7 +111,7 @@
    "prevClose": 98.3,
    "d": "2026-11-26",
    "prevD": "2026-11-25",
-   "src": "isyatirim"
+   "src": "yahoo"
   },
   "EKGYO": {
    "price": 16.66,
@@ -503,7 +503,7 @@
    "prevClose": 95.3,
    "d": "2026-11-26",
    "prevD": "2026-11-25",
-   "src": "isyatirim"
+   "src": "yahoo"
   },
   "TTKOM": {
    "price": 44.76,
@@ -517,7 +517,7 @@
    "prevClose": 1.78,
    "d": "2026-11-26",
    "prevD": "2026-11-25",
-   "src": "yahoo"
+   "src": "isyatirim"
   },
   "TUPRS": {
    "price": 323.25,
@@ -860,9 +860,9 @@
   }
  },
  "fund_errors": {},
- "usdtry": 50.67190170288086,
+ "usdtry": 50.67369842529297,
  "usdtry_prev": 50.666900634765625,
- "gold_gram_try": 5866.69,
+ "gold_gram_try": 5866.58,
  "gold_prevClose": 5759.74,
  "gold_src": "vadeli (GC=F)",
  "xu100": 10743.1103515625,
